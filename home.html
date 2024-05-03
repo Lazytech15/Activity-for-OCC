@@ -4,66 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who is Emman?</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <a id="to-top"></a>
-        <h1>My Simple Diary</h1>
+        <div class="header-container">
+            <h1>My Simple Data</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#question">Question?</a></li>
+                    <li><a href="#media">Social Media</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <hr />
     <main>
-        <section>
-            <h2>My Favorite Quote of Professor Albert einstein</h2>
-            <p>"Life is like riding a bicycle. To keep your balance you must keep moving."</p>
-        </section>
-        <section>
-            <h2>ABOUT MY SELFT</h2>
-            <dl>
-                <dt>INTEREST</dt> 
-                <dd>I'm interest in learning how to program very well and learn about different programming language but specially, <br /> I want to master creating a web site because it's kind of awesome if someone saw my works</dd>
-            </dl>
-            <dl>
-                <dt>HOBBIES</dt>
-                <dd>I like to play video games when i was at high school. Dota 1 League of Legends, Counter Strike. <br /> but now i spend my time sleeping, studying beacuse i continued my college degree, I also play Mobile games like MLBB when there is a free time, I love cooking also.</dd>
-            </dl>
-        </section>
-        <section>
-            <h3>NEED QUESTION? JUST AS ME!</h3>
-            <form method="post">
-                <label for="name">Name: </label>
-                <input type="text" name="name" required>
-                <br />
-                <br />
-                <label for="topic">Topic / Question</label>
-                <input type="text" name="topic" required>
-                <br />
-                <br />
-                <label for="email">Email: </label>
-                <input type="email" name="email" required>
-                <br />
-                <br />
-                <sup><label for="message">Whats on your mind?</label></sup>
-                <textarea name="message" id="" cols="20" rows="3"></textarea>
-                <br />
-                <button type="submit">SEND MESSAGE</button>
-            </form>
-        </section>
-        <section>
-            <h4>MY SOCIAL MEDIA PLATFORM</h4>
-            <a href="https://www.facebook.com/index.php"><img src="https://th.bing.com/th/id/R.3afddac83ca6a3aef8e507dbee472d11?rik=08tO%2b5zMa%2fqnoQ&riu=http%3a%2f%2fwww.freeiconspng.com%2fuploads%2fimages-for--facebook-icon-png-27.png&ehk=b5RsJuZsm1gVeMKmZxI4FRUzuHRKNX0C2kuxozPDjIM%3d&risl=&pid=ImgRaw&r=0" height="30px" width="30px" alt="facebook"></a>
-            <a href="https://twitter.com/?lang-en="><img src="https://th.bing.com/th/id/OIP.1R2vyvI5P7_0Tp6oA38nuAHaHa?rs=1&pid=ImgDetMain" alt="twitter" height="30px" width="30px" style="border: 1px solid black; border-radius: 50%;"></a>
-            <a href="https://www.instagram.com/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/692/original/instagram-logo-instagram-icon-transparent-free-png.png" alt="instagram" height="30px" width="30px"></a>
-            <br />
-            <p>You Can Contact me in this social site if you want to know about me</p>
-        </section>
+        <article>
+            <figure class="quote-text">
+                <h2>My Favorite Quote of Professor Albert einstein</h2>
+                <p>"Life is like riding a bicycle. To keep your balance you must keep moving."</p>
+            </figure>
+        </article>
+        <article class="about-author" id="about">
+            <section>
+                <h2>ABOUT MY SELF</h2>
+                <dl>
+                    <dt>INTEREST</dt> 
+                    <dd>I'm interest in learning how to program very well and learn about different programming language but specially, <br /> I want to master creating a web site because it's kind of awesome if someone saw my works</dd>
+                </dl>
+                <dl>
+                    <dt>HOBBIES</dt>
+                    <dd>I like to play video games when i was at high school. Dota 1 League of Legends, Counter Strike. <br /> but now i spend my time sleeping, studying beacuse i continued my college degree, I also play Mobile games like MLBB when there is a free time, I love cooking also.</dd>
+                </dl>
+                <dl>
+                    <dt>knowledge in programming</dt>
+                    <dd>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>Java</li>
+                            <li>Visual Basic 6.0</li>
+                            <li>alittle bit of C#, c++</li>
+                            <li>PHP</li>
+                            <li>My SQL</li>
+                            <li>No SQL (Firebase)</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>talent</dt>
+                    <dd>
+                        <ul>
+                            <li>Cooking</li>
+                            <li>Professional Driving</li>
+                            <li>Basic trouble shooting of vehicle</li>
+                            <li>Eating</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+        <article>
+            <figure>
+                <section class="question" id="question">
+                    <h3>NEED QUESTION? JUST ASK ME!</h3>
+                    <div class="question-contain">
+                        <div class="image-container">
+                            <div id="images">
+            
+                            </div>
+                        </div>
+                        <form method="post">
+                            <h4>PLEASE TELL ME</h4>
+                            <input type="text" name="name" required>
+                            <label for="name">Your name</label>
+                            <input type="text" name="topic" required>
+                            <label for="topic">Topic</label>
+                            <input type="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <h5 style="margin-top: 10px;">Whats on your mind?</h5>
+                            <textarea name="message" id="" cols="30" rows="5"></textarea>
+                            <br />
+                            <button type="submit">SEND MESSAGE</button>
+                        </form>
+                    </div>
+            </section>  
+            </figure>
+        </article>
+        <article>
+            <figure class="media" id="media">
+                <h4>MY SOCIAL MEDIA PLATFORM</h4>
+                <section class="social-container">
+                    <div class="social" id="fb">
+                        <img src="assets/facebook-profile.jpg" alt="facebook">
+                        <p style="margin-bottom: 5px;">FACEBOOK</p>
+                        <p><u>Emmanuel S. Ablao</u></p>
+                        <p style="font-size: 0.8em;">Social Media Name</p> <br />
+                        <a href="https://www.facebook.com/emman.ablao" target="_blank">VISIT</a><br />
+                    </div>
+                    <div class="social" id="gh">
+                        <img src="assets/15.jpg" alt="GitHub">
+                        <p style="margin-bottom: 5px;">GITHUB</p>
+                        <p><u>Emmanuel Ablao</u></p>
+                        <p style="font-size: 0.8em;">Social Media Name</p> <br />
+                        <a href="https://github.com/Lazytech15?tab=repositories" target="_blank">VISIT</a><br />
+                    </div>
+                    <div class="social" id="gmail">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLPUR0dB-3KofY5yPi0qK1VIhMJ-GsB9O1YzjTCWgE07M8nKaTiPg=s288-c-no" alt="GitHub">
+                        <p style="margin-bottom: 5px;">GMAIL</p>
+                        <p><u>EMMANUEL ABLAO</u></p>
+                        <p style="font-size: 0.8em;">Social Media Name</p> <br />
+                        <a href="" target="_blank">EMAIL ME</a><br />
+                </section>
+                </div>
+            </figure>
+        </article>
     </main>
-    <hr />
-    <aside style="position: absolute; right: 0;">
+    <aside>
         <a href="#to-top"><p>Go to Top</p></a>
     </aside>
     <footer>
-        
-        <p>&copy; 2024 this is a sample website for my activity IN OCC</p>
+        <p>&copy; 2024 this is a sample website for my activity in OCC</p>
     </footer>
 </body>
+<script>
+    let images = ["assets/1.jpg",
+              "assets/2.jpg",
+              "assets/3.jpg",
+              "assets/4.jpg",
+              "assets/5.jpg",
+              "assets/6.jpg",
+              "assets/7.jpg",
+              "assets/8.jpg",
+              "assets/9.jpg",
+              "assets/10.jpg",
+              "assets/11.jpg",
+              "assets/12.jpg",
+              "assets/13.jpg",
+              "assets/14.jpg",
+              "assets/15.jpg"];
+let count = 0;
+
+let imgContainer = document.getElementById('images');
+imgContainer.innerHTML = `<img id="slideshow" src="${images[0]}" alt="" style="transition: opacity 0.7s ease-in-out; opacity: 1;">`;
+
+let intervalID = setInterval(function() {
+    let imgElement = document.getElementById('slideshow');
+    imgElement.style.opacity = 0;
+    setTimeout(function() {
+        imgElement.src = images[count];
+        imgElement.style.opacity = 1;
+    }, 700);
+    count = (count + 1) % images.length;
+}, 4000);
+
+
+
+
+</script>
 </html>
