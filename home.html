@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header with Navigation Bar -->
     <header>
         <a id="to-top"></a>
         <div class="header-container">
@@ -21,13 +23,21 @@
             </nav>
         </div>
     </header>
+    <!-- end header -->
+
     <main>
+
+        <!-- quote text -->
         <article>
+            
             <figure class="quote-text">
                 <h2>My Favorite Quote of Professor Albert einstein</h2>
                 <p>"Life is like riding a bicycle. To keep your balance you must keep moving."</p>
             </figure>
         </article>
+         <!-- end quote -->
+
+        <!-- Minimal Details of the author  -->
         <article class="about-author" id="about">
             <section>
                 <h2>ABOUT MY SELF</h2>
@@ -66,6 +76,9 @@
                 </dl>
             </section>
         </article>
+        <!-- end author -->
+
+        <!-- ask question to the author-->
         <article>
             <figure>
                 <section class="question" id="question">
@@ -93,6 +106,9 @@
             </section>  
             </figure>
         </article>
+        <!-- end question -->
+
+        <!-- social media with links and send email direct to the author via gmail -->
         <article>
             <figure class="media" id="media">
                 <h4>MY SOCIAL MEDIA PLATFORM</h4>
@@ -116,49 +132,50 @@
                         <p style="margin-bottom: 5px;">GMAIL</p>
                         <p><u>EMMANUEL ABLAO</u></p>
                         <p style="font-size: 0.8em;">Social Media Name</p> <br />
-                        <a href="" target="_blank">EMAIL ME</a><br />
+                        <button id="send-button">SEND EMAIL</button>
                 </section>
                 </div>
             </figure>
+
+            <figure id="overlay">
+                <form id="gmail-form" onsubmit="sendEmail(); reset(); return false;">
+                    <h6>Contact Me</h6>
+                    <label for="guest-name">Name: </label>
+                    <input type="text" name="guest-name" id="guest-name" placeholder="Andres Bonifacio" required>
+                    <label for="guest-email">Email: </label>
+                    <input type="email" name="guest-email" id="guest-email" placeholder="san-andres@gmail.com" required>
+                    <label for="guest-company">Company: </label>
+                    <input type="text" name="guest-company" id="guest-company" placeholder="saksi ni java" required>
+                    <label for="guest-contact">Contact: </label>
+                    <input type="number" name="guest-contact" id="guest-contact" placeholder="09123456789" required>
+                    <h6 id="Reason">Reason: </h6>
+                    <textarea name="guest-reason" id="guest-reason" cols="36" rows="6" placeholder="Optional"></textarea>
+                    <div>
+                        <button type="submit">SEND</button>
+                        <button id="cancel-button">CANCEL</button>
+                    </div>
+                </form>
+            </figure>
         </article>
+        <!-- end of social -->
+
     </main>
+
+    <!-- side button move the view to top -->
     <aside>
         <a href="#to-top"><p>Go to Top</p></a>
     </aside>
+    <!-- end of button -->
+
+    <!-- footer disclaimer of the author -->
     <footer>
         <p>&copy; 2024 this is a sample website for my activity in OCC</p>
     </footer>
+    <!-- end footer -->
 </body>
-<script>
-    let images = ["assets/1.jpg",
-              "assets/2.jpg",
-              "assets/3.jpg",
-              "assets/4.jpg",
-              "assets/5.jpg",
-              "assets/6.jpg",
-              "assets/7.jpg",
-              "assets/8.jpg",
-              "assets/9.jpg",
-              "assets/10.jpg",
-              "assets/11.jpg",
-              "assets/12.jpg",
-              "assets/13.jpg",
-              "assets/14.jpg",
-              "assets/15.jpg"];
-let count = 0;
 
-let imgContainer = document.getElementById('images');
-imgContainer.innerHTML = `<img id="slideshow" src="${images[0]}" alt="" style="transition: opacity 0.7s ease-in-out; opacity: 1;">`;
-
-let intervalID = setInterval(function() {
-    let imgElement = document.getElementById('slideshow');
-    imgElement.style.opacity = 0;
-    setTimeout(function() {
-        imgElement.src = images[count];
-        imgElement.style.opacity = 1;
-    }, 700);
-    count = (count + 1) % images.length;
-}, 4000);
-</script>
+<!-- javascript link -->
 <script src="javascript.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
