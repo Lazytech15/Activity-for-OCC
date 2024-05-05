@@ -9,6 +9,8 @@
 body{
     background-color: rgba(69, 46, 84, 0.8);
 }
+
+/* header styling */
 .header-container{
     display: flex;
     justify-content: space-between;
@@ -47,6 +49,8 @@ a:hover{
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
 }
+
+/* quote styling */
 .quote-text {
     margin: auto;
     padding: 10px;
@@ -87,6 +91,7 @@ article dd{
     font-family: "Open Sans", sans-serif;
 }
 
+/* question styling */
 .question{
     color: white;
     padding: 5px;
@@ -139,6 +144,8 @@ article dd{
     border: 1px solid lightblue;
     padding: 20px;
 }
+
+/* question form styling */
 form input{
     margin-top: 5px;
     margin-bottom: 5px;    
@@ -162,6 +169,8 @@ form button:hover{
     color: blueviolet;
     background-color: rgba(24, 255, 0, 0.8);
 }
+
+/* social styling */
 .media{
     margin: auto;
     margin-bottom: 20px;
@@ -203,18 +212,92 @@ form button:hover{
     border-radius: 50%;
     margin-bottom: 5px;
 }
-.social a{
+.social a, #send-button{
     text-decoration: none;
     padding: 10px;
     background-color: blueviolet;
     border-radius: 10px;
     color: white;
     transition: 0.4s ease-in;
+    border-style: none;
 }
-.social a:hover{
+#send-button{
+    margin-top: -10px;
+}
+.social a:hover, #send-button:hover{
     color: rgba(0, 0, 0, 0.712);
     background-color: rgb(162, 81, 238);
 }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    display: none; 
+}
+
+#gmail-form {
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 16px;
+    font-weight: 700;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 25%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 2;
+    background: rgb(114,14,163);
+    background: linear-gradient(180deg, rgba(114,14,163,1) 26%, rgba(0,212,255,1) 100%);
+}
+#gmail-form h6{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#gmail-form label::before{
+    content: "* ";
+    color: red;
+    margin-left: -10px;
+}
+#gmail-form #Reason{
+    font-size: 16px;
+    margin-bottom: initial;
+}
+#gmail-form input{
+    margin-bottom: 10px;
+    height: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+#gmail-form textarea{
+    border-radius: 10px;
+    padding: 10px;
+}
+#gmail-form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#gmail-form button{
+    margin-top: 10px;
+    width: 45%;
+    background-color: blueviolet;
+    color: white;
+    transition: 0.4s ease-in;
+}
+#gmail-form button:hover{
+    color: rgb(241, 240, 240);
+    background-color: rgb(162, 81, 238);
+}
+
+/* side button/to-top styling */
 aside{
     position: absolute;
     background-color: blueviolet;
@@ -242,6 +325,7 @@ aside p:hover::after {
     position: absolute;
 }
 
+/* footer styling */
 footer{
     color: white;
     margin-top: 20px;
