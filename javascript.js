@@ -88,3 +88,16 @@ function sendEmail(){
       }
     );
 }
+
+//aside button make the Go to Top appear when the view port screen change to 100px
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  const asideButton = document.getElementsByTagName('aside')[0];
+
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    asideButton.style.display = "block";
+  } else {
+    asideButton.style.display = "none";
+  }
+}
