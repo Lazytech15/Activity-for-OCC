@@ -6,9 +6,9 @@ const form = document.getElementById('form-message');
 form.addEventListener('submit', e =>{
     e.preventDefault()
     fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-    .then(response => alert ("Thank yoy! your message has been submitted successfully."))
+    .then(response => swal("Great!", "Question is send successfully, Thank you!", "success"))
     .then(()=> {window.location.reload(); })
-    .catch(error => console.error('error!', error.message))
+    .catch(error => swal("Error!", "Sorry for inconvient", "error"))
 })
 
 //Make Image Switch every 4s loop 
