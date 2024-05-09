@@ -1,3 +1,5 @@
+
+
 // Send Message to Google Spreadsheet
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxHN0RmjdD6dWME5bLy8pHd14Kb5Hr6SXcRtIxeEIwiAL_7pJkBKMew-dmRjqwG43NJ-g/exec'
 
@@ -30,7 +32,7 @@ let images = ["assets/1.jpg",
 let count = 0;
 
 let imgContainer = document.getElementById('images');
-imgContainer.innerHTML = `<img id="slideshow" src="${images[0]}" alt="" style="transition: opacity 0.7s ease-in-out; opacity: 1;">`;
+imgContainer.innerHTML = `<img id="slideshow" src="${images[0]}" alt="Random Picture" style="transition: opacity 0.7s ease-in-out; opacity: 1;">`;
 
 let intervalID = setInterval(function() {
     let imgElement = document.getElementById('slideshow');
@@ -89,15 +91,44 @@ function sendEmail(){
     );
 }
 
-//aside button make the Go to Top appear when the view port screen change to 100px
-window.onscroll = function() {scrollFunction()};
+//aside button make the Go to Top appear when the view port screen change to 100px and add time out when no motion
+let isScrolling;
 
 function scrollFunction() {
   const asideButton = document.getElementsByTagName('aside')[0];
 
+  window.clearTimeout(isScrolling);
+
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    asideButton.style.opacity = "1";
+    asideButton.style.transition = "0.2s ease-in-out";
     asideButton.style.display = "block";
+
+    isScrolling = setTimeout(function() {
+      if (!asideButton.matches(':hover')) {
+        asideButton.style.opacity = "0";
+      }
+    }, 2000);
   } else {
-    asideButton.style.display = "none";
+    asideButton.style.opacity = "0";
   }
 }
+
+window.onscroll = scrollFunction;
+
+document.getElementsByTagName('aside')[0].addEventListener('mouseover', function() {
+  this.style.opacity = "1";
+  window.clearTimeout(isScrolling);
+});
+
+document.getElementsByTagName('aside')[0].addEventListener('mouseout', function() {
+
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    isScrolling = setTimeout(function() {
+      asideButton.style.opacity = "0";
+    }, 2000);
+  }
+});
+
+
+
