@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="assets/person.png">
+    <link rel="icon" id="logo-img" href="assets/person.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who is Emman?</title>
     <link rel="stylesheet" href="style.css">
@@ -13,28 +13,47 @@
     <header>
         <a id="to-top"></a>
         <div class="header-container">
-            <h1>My Simple Data <img src="assets/developer.png" alt="Developer_Icon"></h1>
+            <img id="small_screen_view" src="assets/developer.png" alt="Developer-icon"><h1> My Simple<img id="big-screen-view" src="assets/developer.png" alt="Developer_Icon"> Data </h1>
             <nav class="nav-bar">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#question">Question?</a></li>
+                    <li><a href="#jump-about">About me</a></li>
+                    <li><a href="#jump-question">Question?</a></li>
                     <li><a href="#media">Social Media</a></li>
                 </ul>
             </nav>
         </div>
+        <a id="jump-about"></a>
+        <!-- small screen-view -->
+        <nav class="top-nav">
+            <div class="nav-logo">
+                <img id="small_screen_view" src="assets/developer.png" alt="Developer-icon"><h1> My Simple Data </h1>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+          </label>
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#jump-about">About me</a></li>
+              <li><a href="#jump-question">Question?</a></li>
+              <li><a href="#media">Social Media</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- end header -->
-
+    
     <main>
 
         <!-- quote text -->
         <article>
             
             <figure class="quote-text">
+                
                 <h2>My Favorite Quote of Professor Albert einstein</h2>
                 <p>"Life is like riding a bicycle. To keep your balance you must keep moving."</p>
             </figure>
+            
         </article>
          <!-- end quote -->
 
@@ -65,7 +84,7 @@
                     </dd>
                 </dl>
                 <dl>
-                    <dt>talent</dt>
+                    <dt id="jump-question">talent</dt>
                     <dd>
                         <ul>
                             <li>Cooking</li>
@@ -163,6 +182,7 @@
     </main>
 
     <!-- side button move the view to top -->
+    <!-- <img src="assets/not-active-to-top.png" alt="Got to top icon"> -->
     <aside>
         <a href="#to-top"><img src="assets/not-active-to-top.png" alt="Got to top icon"><p></p></a>
     </aside>
@@ -170,13 +190,12 @@
 
     <!-- footer disclaimer of the author -->
     <footer>
-        <p>&copy; 2024 this is a sample website for my activity in OCC</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Disclaimer || a project of Emmanuel Ablao to OCC</p>
     </footer>
     <!-- end footer -->
+    <!-- javascript link -->
+    <script src="javascript.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
-
-<!-- javascript link -->
-<script src="javascript.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
